@@ -1,0 +1,21 @@
+# Résumé des commandes git et github
+## Création d'un dépôt local
+- Dans Visual Code sélectionner le dossier du thème et avec touche droit de la souris Open in integrated terminal
+- git init (on exécute une seule fois cette commande. Permet de créer le dossier masqué **.git**)
+- git status
+- git add --all (de préférence faire celui la pour la première indexation) ou git add .
+- git commit -m "s2c1 description les modifications"
+- git log
+- git log --oneline
+- git remote add origin https://github.com/DacAnne/4w4.git
+- git branch -m main (change la branche master pour main)
+- git branch lab1 (créer la branche «lab1»)
+- git checkout lab1 (pour changer la branche vers «lab1»)
+- git log --oneline (les brnches lab1 et main pointe vers le même commit)
+- git checkout main
+- git push 4w4 main (pousse la branche active «main» vers github dans le dépot origin vers la branche main)
+- git checkout lab1
+- git push origin lab1
+- git branch lab2
+- git checkout lab2
+- git push origin lab2 (pousse la branche active lab2 vers origin dans la branche lab2)
