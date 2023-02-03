@@ -1,0 +1,9 @@
+a {
+    color: cadetblue;
+    &:visited{
+        color: rgb(147, 86, 193);
+    }
+    &:hover{
+        color: darkcyan;
+    }
+}
