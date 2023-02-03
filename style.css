@@ -389,4 +389,28 @@ a:hover {
 .site__footer section {
   border: 1px solid #aaa;
   flex: 1 1 200px;
+  text-align: center;
+  padding: 1% 0;
+  color: cadetblue;
+}
+
+.menu-entete-container {
+  background-color: rgb(4, 29, 41);
+  padding: 0.1% 0.1%;
+  padding-right: 3%;
+}
+
+#menu-entete {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#menu-entete li {
+  background-color: beige;
+  border: 1px solid #aaa;
+  flex: 1 1 200px;
+  text-align: center;
+  padding: 1% 0;
+  color: cadetblue;
+  list-style-type: none;
 }/*# sourceMappingURL=style.css.map */
