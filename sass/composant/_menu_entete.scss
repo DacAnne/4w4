@@ -1,0 +1,36 @@
+.menu-entete-container{ //nav
+    background-color: rgb(4, 29, 41);
+    padding: 0.1% 0.1%;
+
+    .menu{ //ul
+        display: flex;
+        list-style-type: none;
+        justify-content: space-around;
+
+        .menu-item{
+            
+            a {
+                display: block;
+                color: azure;
+            }
+        }
+    }
+}
+
+
+// #menu-entete{
+//     display: flex;
+//     justify-content: space-between;
+//     flex-wrap: wrap;
+
+//     li{
+//         background-color:  beige;
+//         border: 1px solid #aaa;
+//         flex: 1 1 200px;
+//         text-align: center;
+//         padding: 1% 0;
+//         color: cadetblue;
+//         list-style-type: none;
+//     }
+
+// }
