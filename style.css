@@ -394,16 +394,31 @@ a:hover {
   color: cadetblue;
 }
 
-.menu-entete-container {
+.site__header__logo {
   background-color: rgb(4, 29, 41);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-logo-link {
+  height: 100px;
+}
+.custom-logo-link .custom-logo {
+  height: 100%;
+  width: 100%;
+}
+
+.menu-entete-container {
   padding: 0.1% 0.1%;
 }
 .menu-entete-container .menu {
   display: flex;
   list-style-type: none;
-  justify-content: space-around;
+  justify-content: flex-end;
 }
 .menu-entete-container .menu .menu-item a {
   display: block;
   color: azure;
+  padding: 5px 20px;
 }/*# sourceMappingURL=style.css.map */

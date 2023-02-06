@@ -1,0 +1,40 @@
+.site__header{
+   
+}
+.site__header__logo{
+    background-color: rgb(4, 29, 41);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.custom-logo-link{
+   height: 100px;
+    .custom-logo{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+
+.menu-entete-container{ //nav
+   
+    padding: 0.1% 0.1%;
+
+    .menu{ //ul
+        display: flex;
+        list-style-type: none;
+        justify-content: flex-end;
+
+        .menu-item{
+            
+            a {
+                display: block;
+                color: azure;
+                padding: 5px 20px;
+            }
+        }
+    }
+}
+
+
