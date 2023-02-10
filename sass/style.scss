@@ -17,10 +17,12 @@ Text Domain: 2023-4w4
 
 /* --------------------------------------------- base */
 @import "base/heading";
+@import "base/body";
 // @import "base/espacement";
 @import "base/link";
 // @import "base/list";
 
 /* --------------------------------------------- composant */
 @import "composant/pied_page";
+@import "composant/main";
 @import "composant/site_entete";

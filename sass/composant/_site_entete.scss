@@ -1,22 +1,29 @@
 .site__header{
-   
+    h1, h2{
+        padding-left: 3rem;
+    }
+
 }
 .site__header__logo{
-    background-color: rgb(4, 29, 41);
+    background-color: #041d29;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 3rem;
+    padding-top: 10px;
+    
+   
     
 }
 .custom-logo-link{
-   height: 100px;
+   width: 150px;
     .custom-logo{
         height: 100%;
         width: 100%;
     }
 }
 
-
+/* ------------------------------------------------ Menu-entete */
 .menu-entete-container{ //nav
    
     padding: 0.1% 0.1%;
@@ -25,12 +32,13 @@
         display: flex;
         list-style-type: none;
         justify-content: flex-end;
+        flex-wrap: wrap;
 
         .menu-item{
             
             a {
                 display: block;
-                color: azure;
+                
                 padding: 5px 20px;
             }
         }

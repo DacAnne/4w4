@@ -321,6 +321,10 @@ template {
 }
 
 /* --------------------------------------------- base */
+/* 
+Clamp font-size generator *
+https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6IjUwMHB4IiwibWF4V2lkdGgiOiIxODAwcHgiLCJtaW5Gb250U2l6ZSI6IjE0cHgiLCJtYXhGb250U2l6ZSI6IjUycHgifQ%3D%3D
+*/
 h1 {
   font-size: clamp(0.875rem, -0.0385rem + 2.9231vw, 3.25rem);
 }
@@ -369,14 +373,29 @@ p {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
-a {
-  color: cadetblue;
+body {
+  background-color: rgb(227, 233, 244);
 }
-a:visited {
-  color: rgb(147, 86, 193);
+
+main a {
+  color: rgb(4, 89, 92);
 }
-a:hover {
-  color: darkcyan;
+main a:visited {
+  color: rgb(21, 1, 37);
+}
+main a:hover {
+  color: rgb(1, 58, 58);
+  border-bottom: 3px solid rgb(1, 58, 58);
+}
+
+.menu-item a {
+  color: white;
+}
+.menu-item a:visited {
+  color: rgb(110, 72, 235);
+}
+.menu-item a:hover {
+  color: rgb(235, 72, 72);
 }
 
 /* --------------------------------------------- composant */
@@ -391,24 +410,35 @@ a:hover {
   flex: 1 1 200px;
   text-align: center;
   padding: 1% 0;
-  color: cadetblue;
+  color: #041d29;
+}
+
+main {
+  padding: 0 3rem;
+}
+
+.site__header h1, .site__header h2 {
+  padding-left: 3rem;
 }
 
 .site__header__logo {
-  background-color: rgb(4, 29, 41);
+  background-color: #041d29;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 3rem;
+  padding-top: 10px;
 }
 
 .custom-logo-link {
-  height: 100px;
+  width: 150px;
 }
 .custom-logo-link .custom-logo {
   height: 100%;
   width: 100%;
 }
 
+/* ------------------------------------------------ Menu-entete */
 .menu-entete-container {
   padding: 0.1% 0.1%;
 }
@@ -416,9 +446,9 @@ a:hover {
   display: flex;
   list-style-type: none;
   justify-content: flex-end;
+  flex-wrap: wrap;
 }
 .menu-entete-container .menu .menu-item a {
   display: block;
-  color: azure;
   padding: 5px 20px;
 }/*# sourceMappingURL=style.css.map */

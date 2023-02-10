@@ -1,9 +1,21 @@
-a {
-    color: cadetblue;
+main a {
+    color: rgb(4, 89, 92);
     &:visited{
-        color: rgb(147, 86, 193);
+        color: rgb(21, 1, 37)
     }
     &:hover{
-        color: darkcyan;
+        color: rgb(1, 58, 58);
+        border-bottom: 3px solid rgb(1, 58, 58);
     }
 }
+
+.menu-item a{
+    color: white;
+    &:visited{
+        color: rgb(110, 72, 235);
+    }
+    &:hover{
+        color: rgb(235, 72, 72);
+    }
+}
+
