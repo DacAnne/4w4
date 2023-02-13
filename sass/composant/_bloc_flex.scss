@@ -1,0 +1,12 @@
+.blocflex{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    article{
+        flex: 1 0 500px;
+        border: 1px black solid;
+        padding: 10px;
+        padding-left: 20px;
+    }
+}
