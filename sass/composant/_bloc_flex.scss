@@ -1,12 +1,28 @@
-.blocflex{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+// .blocflex{
+//     display: flex;
+//     justify-content: space-between;
+//     flex-wrap: wrap;
+//     gap: 2rem;
+//     article{
+//         flex: 1 0 500px;
+//         border: 1px black solid;
+//         padding: 10px;
+//         padding-left: 20px;
+//     }
+// }
+
+.blocflex {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    // Cette déclaration sera meilleur quand min() sera mieux supporté
+    // grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
     gap: 2rem;
-    article{
-        flex: 1 0 500px;
-        border: 1px black solid;
-        padding: 10px;
-        padding-left: 20px;
+    margin: 2rem;
+  
+    article {
+      border: 1px solid #aaa;
+      padding: 1rem;
     }
-}
+  }
+
+  

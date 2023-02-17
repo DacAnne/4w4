@@ -26,13 +26,13 @@
 .menu-entete-container{ //nav
    
     padding: 0.1% 0.1%;
-
+   
     .menu{ //ul
         display: flex;
         list-style-type: none;
         justify-content: flex-end;
         flex-wrap: wrap;
-
+        
         .menu-item{
             
             a {

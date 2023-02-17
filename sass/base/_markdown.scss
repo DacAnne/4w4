@@ -3,9 +3,20 @@
 ul,ol{
 
 }
+
+ul{
+    list-style-type: none;
+}
 ul > li,
 ol > li{
 
+}
+main li::before{
+    content: "\2694";
+    background-color: lightblue;
+    border-radius: 1ch;
+    padding-inline: 1ch;
+    padding-inline-end: 1ch;
 }
 
 ul>li{}

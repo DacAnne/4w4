@@ -398,6 +398,18 @@ main a:hover {
   color: rgb(235, 72, 72);
 }
 
+ul {
+  list-style-type: none;
+}
+
+main li::before {
+  content: "⚔";
+  background-color: lightblue;
+  border-radius: 1ch;
+  padding-inline: 1ch;
+  padding-inline-end: 1ch;
+}
+
 /* ************************************** pre */
 /* --------------------------------------------- composant */
 .site__footer {
@@ -419,16 +431,14 @@ main {
   border-top: 1px solid black;
 }
 .blocflex {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
+  margin: 2rem;
 }
 .blocflex article {
-  flex: 1 0 500px;
-  border: 1px black solid;
-  padding: 10px;
-  padding-left: 20px;
+  border: 1px solid #aaa;
+  padding: 1rem;
 }
 
 .site__header h1, .site__header h2 {

@@ -1,11 +1,12 @@
 <?php
 /**
- * Modèle par défaut
+ * Modèle category par défaut
  * 
  */
 ?>
 <?php get_header();?>
 <main>
+    <h3>Category.php</h3>
     <section class="blocflex">
         <?php 
             if(have_posts()):
@@ -16,6 +17,7 @@
                 </h3>
                 <?php //the_content();  // affiche le contenu complet de l'article ?>
                 <?php //the_excerpt(); // affiche résumé de l'article ?>
+                <!-- <p><?php if(is_category('cours')){}  ?></p> -->
                 <p> <?= wp_trim_words(get_the_excerpt(), 10, "&#8658;") ?></p> 
             </article>   
         <?php    
