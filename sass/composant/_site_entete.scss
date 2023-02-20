@@ -1,6 +1,6 @@
 .site__header{
     h1, h2{
-        padding-left: 3rem;
+        padding-left: 5rem;
     }
 }
 .site__header__logo{
@@ -10,31 +10,25 @@
     align-items: center;
     padding: 0 3rem;
     padding-top: 10px;
+
+}
+.logomenu{
+    display: flex;
+    align-items: center;
     
    
     
-}
-.custom-logo-link{
-   width: 150px;
-    .custom-logo{
-        height: 100%;
-        width: 100%;
-    }
 }
 
 /* ------------------------------------------------ Menu-entete */
 .menu-entete-container{ //nav
-   
-    padding: 0.1% 0.1%;
-   
     .menu{ //ul
         display: flex;
         list-style-type: none;
-        justify-content: flex-end;
+        justify-content: flex-start;
         flex-wrap: wrap;
-        
+
         .menu-item{
-            
             a {
                 display: block;
                 
@@ -44,4 +38,18 @@
     }
 }
 
+form{
+    display: flex;
+    input{
+        height: 2.5rem;
+        border-radius: 1rem 0 0 1rem;
+        border: none;
+        padding-left: 1rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    button{
+        border: none;
+        border-radius: 0 1rem 1rem 0;
+    }
+}
 

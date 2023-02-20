@@ -377,15 +377,17 @@ body {
   background-color: rgb(227, 233, 244);
 }
 
-main a {
+a {
   color: rgb(4, 89, 92);
 }
-main a:visited {
+a:visited {
   color: rgb(21, 1, 37);
 }
-main a:hover {
+a:hover {
   color: rgb(1, 58, 58);
-  border-bottom: 3px solid rgb(1, 58, 58);
+}
+a:hover, a:visited, a:active, a:link {
+  text-decoration: none;
 }
 
 .menu-item a {
@@ -442,7 +444,7 @@ main {
 }
 
 .site__header h1, .site__header h2 {
-  padding-left: 3rem;
+  padding-left: 5rem;
 }
 
 .site__header__logo {
@@ -454,25 +456,34 @@ main {
   padding-top: 10px;
 }
 
-.custom-logo-link {
-  width: 150px;
-}
-.custom-logo-link .custom-logo {
-  height: 100%;
-  width: 100%;
+.logomenu {
+  display: flex;
+  align-items: center;
 }
 
 /* ------------------------------------------------ Menu-entete */
-.menu-entete-container {
-  padding: 0.1% 0.1%;
-}
 .menu-entete-container .menu {
   display: flex;
   list-style-type: none;
-  justify-content: flex-end;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 .menu-entete-container .menu .menu-item a {
   display: block;
   padding: 5px 20px;
+}
+
+form {
+  display: flex;
+}
+form input {
+  height: 2.5rem;
+  border-radius: 1rem 0 0 1rem;
+  border: none;
+  padding-left: 1rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+form button {
+  border: none;
+  border-radius: 0 1rem 1rem 0;
 }/*# sourceMappingURL=style.css.map */
