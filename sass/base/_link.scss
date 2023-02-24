@@ -1,11 +1,10 @@
  a {
-    color: rgb(4, 89, 92);
+    color:  rgb(79, 69, 69);
     &:visited{
-        color: rgb(21, 1, 37)
-       
+        color:  rgb(79, 69, 69)  
     }
     &:hover{
-        color: rgb(1, 58, 58);
+        color: rgb(235, 119, 119);
     }
     &:hover,
     &:visited,
@@ -16,10 +15,11 @@
 .menu-item a{
     color: white;
     &:visited{
-        color: rgb(110, 72, 235);
+        color: rgb(235, 119, 119);
     }
     &:hover{
         color: rgb(235, 72, 72);
+        border-bottom: 1px solid black;
     }
 }
 

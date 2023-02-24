@@ -5,26 +5,27 @@
  */
 ?>
 <?php get_header();?>
-<main>
-    <h3>Category.php</h3>
-    <section class="blocflex">
-        <?php 
-            if(have_posts()):
-                while (have_posts()) : the_post(); ?>
+
+<!-- ///////////////////////////////// -->
+<main class="site__main">
+   <section class="blocflex">
+      <?php
+      $category = get_queried_object();
+      $args = array(
+         'category_name' => $category->slug,
+         'orderby' => 'title',
+         'order' => 'ASC'
+      );
+      $query = new WP_Query( $args );
+      if ( $query->have_posts() ) :
+         while ( $query->have_posts() ) : $query->the_post(); ?>
             <article>
-                <h3>
-                    <a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a>
-                </h3>
-                <?php //the_content();  // affiche le contenu complet de l'article ?>
-                <?php //the_excerpt(); // affiche résumé de l'article ?>
-                <!-- <p><?php if(is_category('cours')){}  ?></p> -->
-                <p> <?= wp_trim_words(get_the_excerpt(), 10, "&#8658;") ?></p> 
-            </article>   
-        <?php    
-                endwhile;
-            endif;
-        ?>
-    </section>
-    <!-- <h1> Bienvenue au cours de 4w4</h1> -->
+               <h2><a href="<?php the_permalink(); ?>"> <?= get_the_title(); ?></a></h2>
+               <p><?= wp_trim_words(get_the_excerpt(), 15) ?></p>
+            </article>
+         <?php endwhile; ?>
+      <?php endif;
+      wp_reset_postdata();?>
+   </section>
 </main>
 <?php get_footer();?>

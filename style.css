@@ -326,11 +326,11 @@ Clamp font-size generator *
 https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6IjUwMHB4IiwibWF4V2lkdGgiOiIxODAwcHgiLCJtaW5Gb250U2l6ZSI6IjE0cHgiLCJtYXhGb250U2l6ZSI6IjUycHgifQ%3D%3D
 */
 h1 {
-  font-size: clamp(0.875rem, -0.0385rem + 2.9231vw, 3.25rem);
+  font-size: clamp(2.5rem, 2.2596rem + 0.7692vw, 3.125rem);
 }
 
 h2 {
-  font-size: clamp(0.625rem, -0.3125rem + 3vw, 2.5rem);
+  font-size: clamp(1.875rem, 1.6346rem + 0.7692vw, 2.5rem);
 }
 
 h3 {
@@ -350,7 +350,7 @@ h6 {
 }
 
 P {
-  font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.1rem);
+  font-size: clamp(1rem, 0.9519rem + 0.1538vw, 1.125rem);
 }
 
 h1 {
@@ -367,6 +367,7 @@ h4,
 h5,
 h6 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: clamp(1.375rem, 1.1106rem + 0.8462vw, 2.0625rem);
 }
 
 p {
@@ -374,17 +375,17 @@ p {
 }
 
 body {
-  background-color: rgb(227, 233, 244);
+  background-color: rgb(246, 236, 199);
 }
 
 a {
-  color: rgb(4, 89, 92);
+  color: rgb(79, 69, 69);
 }
 a:visited {
-  color: rgb(21, 1, 37);
+  color: rgb(79, 69, 69);
 }
 a:hover {
-  color: rgb(1, 58, 58);
+  color: rgb(235, 119, 119);
 }
 a:hover, a:visited, a:active, a:link {
   text-decoration: none;
@@ -394,14 +395,16 @@ a:hover, a:visited, a:active, a:link {
   color: white;
 }
 .menu-item a:visited {
-  color: rgb(110, 72, 235);
+  color: rgb(235, 119, 119);
 }
 .menu-item a:hover {
   color: rgb(235, 72, 72);
+  border-bottom: 1px solid black;
 }
 
-ul {
-  list-style-type: none;
+ul > li,
+ol > li {
+  padding: 3px;
 }
 
 main li::before {
@@ -412,7 +415,22 @@ main li::before {
   padding-inline-end: 1ch;
 }
 
+ul {
+  list-style-type: none;
+  padding-top: 3px;
+}
+
 /* ************************************** pre */
+blockquote {
+  color: rgb(102, 86, 86);
+  font-weight: 700;
+}
+
+strong {
+  font-style: italic;
+  color: rgb(89, 133, 216);
+}
+
 /* --------------------------------------------- composant */
 .site__footer {
   display: flex;
@@ -421,22 +439,27 @@ main li::before {
 }
 
 .site__footer section {
-  border: 1px solid #aaa;
+  border: 1px solid rgb(0, 0, 0);
   flex: 1 1 200px;
   text-align: center;
   padding: 1% 0;
-  color: #041d29;
+  color: #ffffff;
+  background-color: rgb(64, 56, 55);
 }
 
 main {
   padding: 3rem;
   border-top: 1px solid black;
 }
+main article {
+  box-shadow: 12px 12px 2px 1px rgba(79, 79, 155, 0.2);
+}
+
 .blocflex {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
-  margin: 2rem;
+  margin: clamp(0rem, -0.7692rem + 2.4615vw, 2rem);
 }
 .blocflex article {
   border: 1px solid #aaa;
@@ -444,16 +467,19 @@ main {
 }
 
 .site__header h1, .site__header h2 {
-  padding-left: 5rem;
+  padding-left: clamp(3.5rem, 2.9231rem + 1.8462vw, 5rem);
 }
 
 .site__header__logo {
-  background-color: #041d29;
+  background-color: rgb(64, 56, 55);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 0 3rem;
   padding-top: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: large;
 }
 
 .logomenu {
@@ -475,6 +501,7 @@ main {
 
 form {
   display: flex;
+  margin-bottom: 5px;
 }
 form input {
   height: 2.5rem;

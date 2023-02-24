@@ -4,12 +4,10 @@ ul,ol{
 
 }
 
-ul{
-    list-style-type: none;
-}
+
 ul > li,
 ol > li{
-
+    padding: 3px;
 }
 main li::before{
     content: "\2694";
@@ -18,14 +16,18 @@ main li::before{
     padding-inline: 1ch;
     padding-inline-end: 1ch;
 }
+ul{
+    list-style-type: none;
+    padding-top: 3px;
+}
 
-ul>li{}
+ul>li{ }
 ol>li{}
 
 /* ************************************** pre */
 pre{}
 code{}
 i{}
-blockquote{}
-hr{}
-strong{}
+blockquote{color: rgb(102, 86, 86); font-weight: 700; }
+hr{ }
+strong{font-style: italic; color: rgb(89, 133, 216);}
