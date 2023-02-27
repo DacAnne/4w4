@@ -4,8 +4,15 @@
  * 
  */
 ?>
+
 <?php get_header();?>
+
 <main>
+    <div class="titre">
+        <h1><a href="<?= bloginfo('url')?>"><?= bloginfo('name')?></a></h1>
+        <h2><?= bloginfo('description')?></h2>
+    </div>
+
     <section class="blocflex">
         <?php 
             if(have_posts()):

@@ -3,8 +3,7 @@
 */
 .site__header {
     grid-area: header;
-   
-    
+ 
   }
   
   .site__main {
@@ -19,6 +18,7 @@
   .site__aside {
     grid-area: aside; 
     background-color: rgb(64, 56, 55);
+    display: none;
   }
 
   .site {
@@ -29,16 +29,35 @@
       "aside"
       "main"
       "footer";
-    row-gap: 50px;
+    // row-gap: 50px;
    
   
-    @media screen and (min-width: 1000px) {
-      grid-template-columns: 20% auto;
+    @media screen and (min-width: 1000px) and (max-width:1499px){
+      grid-template-columns: 18% auto;
       grid-template-areas:
         "header header"
         "aside main"
         // ". main"
         "footer footer";
         row-gap: 0px;
+
+        .site__aside {
+            display: block;
+          }
     }
+    @media screen and (min-width: 1500px) {
+        grid-template-columns: 13% auto;
+        grid-template-areas:
+          "header header"
+          "aside main"
+          // ". main"
+          "footer footer";
+          row-gap: 0px;
+
+          .site__aside {
+            display: block;
+          }
+      }
+
+      
   }
