@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head(); ?>
 </head>
-<body>
+<body class="site">
     <header class="site__header">
         
         <section class="site__header__logo">
@@ -22,4 +22,10 @@
         <h1><a href="<?= bloginfo('url')?>"><?= bloginfo('name')?></a></h1>
         <h2><?= bloginfo('description')?></h2>
     </header>
+
+<aside class="site__aside">
+    <?php wp_nav_menu(array(
+            "menu" => "aside",
+            "container => nav")); ?>
+</aside>
     

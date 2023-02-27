@@ -513,4 +513,39 @@ form input {
 form button {
   border: none;
   border-radius: 0 1rem 1rem 0;
+}
+
+/**
+* Mise en page général avec display grid
+*/
+.site__header {
+  grid-area: header;
+}
+
+.site__main {
+  grid-area: main;
+  overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+}
+
+.site__footer {
+  grid-area: footer;
+}
+
+.site__aside {
+  grid-area: aside;
+  background-color: rgb(64, 56, 55);
+}
+
+.site {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas: "header" "aside" "main" "footer";
+  row-gap: 50px;
+}
+@media screen and (min-width: 1000px) {
+  .site {
+    grid-template-columns: 20% auto;
+    grid-template-areas: "header header" "aside main" "footer footer";
+    row-gap: 0px;
+  }
 }/*# sourceMappingURL=style.css.map */
