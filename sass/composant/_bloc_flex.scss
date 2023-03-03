@@ -19,10 +19,22 @@
     gap: 2rem;
     margin: clamp(0rem, -0.7692rem + 2.4615vw, 2rem);
   
-    article {
-      border: 1px solid #aaa;
-      padding: 1rem;
+  }
+
+  .blocflex__article {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #aaa;
+    padding: 1em;
+    justify-content: space-between;
+    h3,h5,h6,p{
+      margin: 0;
+      padding: 0;
     }
+  }
+  .blockflex__galerie{
+    flex: 1 0 100% ;
+    border: 1px solid #aaa;
   }
 
 
