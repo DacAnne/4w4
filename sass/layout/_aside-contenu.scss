@@ -18,7 +18,16 @@
   .site__aside {
     grid-area: aside; 
     background-color: rgb(64, 56, 55);
-    display: none;
+    // display: none;
+
+    h4{
+      padding: 0;
+      padding-top: 5px;
+      margin: 0;
+      text-align: center;
+      color: aliceblue;
+      font-size: clamp(1rem, 0.8077rem + 0.6154vw, 1.5rem);;
+    }
   }
 
   .site {

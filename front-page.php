@@ -18,12 +18,13 @@
             if(have_posts()):
                 while (have_posts()) : the_post();
                 if (in_category('galerie')){
-                    get_template_part('template-parts/categorie', 'galerie');   
+                   ;   
+                    $la_categorie = 'galerie';
                 }
                 else{
-                    get_template_part('template-parts/categorie', '4w4');   
+                    $la_categorie = '4w4';
                 }
-               
+                get_template_part('template-parts/categorie', $la_categorie);
                 endwhile;
             endif;
         ?>

@@ -23,6 +23,7 @@
     </header>
 
 <aside class="site__aside">
+    <h4>Menu secondaire</h4>
     <?php wp_nav_menu(array(
             "menu" => "aside",
             "container => nav")); ?>
