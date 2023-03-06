@@ -572,7 +572,7 @@ form button {
   grid-template-columns: auto;
   grid-template-areas: "header" "aside" "main" "footer";
 }
-@media screen and (min-width: 1000px) and (max-width: 1499px) {
+@media screen and (min-width: 1000px) {
   .site {
     grid-template-columns: 18% auto;
     grid-template-areas: "header header" "aside main" "footer footer";
@@ -590,5 +590,12 @@ form button {
   }
   .site .site__aside {
     display: block;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .no-aside {
+    grid-template-columns: auto;
+    grid-template-areas: "header" "aside" "main" "footer";
   }
 }/*# sourceMappingURL=style.css.map */

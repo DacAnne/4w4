@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head(); ?>
 </head>
-<body class="site">
+<body class="site  <?php echo (is_front_page()?'no-aside':'') ?>">
     <header class="site__header">
         
         <section class="site__header__logo">
@@ -21,12 +21,7 @@
         </section>
         
     </header>
+<?php get_template_part("template-parts/aside") ?>
 
-<aside class="site__aside">
-    <h4>Menu secondaire</h4>
-    <?php wp_nav_menu(array(
-            "menu" => "aside",
-            "container => nav")); ?>
-</aside>
 
     
