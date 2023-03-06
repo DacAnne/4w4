@@ -465,18 +465,13 @@ main article {
   flex-wrap: wrap;
   gap: 2rem;
 }
-.blocflex article {
-  flex: 1 0 300px;
-  border: 1px black solid;
-  padding: 10px;
-  padding-left: 20px;
-}
-
 .blocflex__article {
   display: flex;
+  flex: 1 0 300px;
+  border: 1px black solid;
   flex-direction: column;
-  border: 1px solid #aaa;
   padding: 1em;
+  order: 2;
   justify-content: space-between;
 }
 .blocflex__article h3, .blocflex__article h5, .blocflex__article h6, .blocflex__article p {
@@ -486,7 +481,7 @@ main article {
 
 .blockflex__galerie {
   flex: 1 0 100%;
-  border: 1px solid #aaa;
+  box-shadow: none;
 }
 
 .site__header h1, .site__header h2 {
@@ -557,6 +552,7 @@ form button {
 .site__aside {
   grid-area: aside;
   background-color: rgb(64, 56, 55);
+  text-align: center;
 }
 .site__aside h4 {
   padding: 0;
@@ -580,6 +576,7 @@ form button {
   }
   .site .site__aside {
     display: block;
+    text-align: start;
   }
 }
 @media screen and (min-width: 1500px) {

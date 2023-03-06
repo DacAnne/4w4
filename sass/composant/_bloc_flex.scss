@@ -4,10 +4,7 @@
     flex-wrap: wrap;
     gap: 2rem;
     article{
-        flex: 1 0 300px;
-        border: 1px black solid;
-        padding: 10px;
-        padding-left: 20px;
+        
     }
 }
 
@@ -23,9 +20,11 @@
 
   .blocflex__article {
     display: flex;
+    flex: 1 0 300px;
+    border: 1px black solid;
     flex-direction: column;
-    border: 1px solid #aaa;
     padding: 1em;
+    order: 2;
     justify-content: space-between;
     h3,h5,h6,p{
       margin: 0;
@@ -34,7 +33,7 @@
   }
   .blockflex__galerie{
     flex: 1 0 100% ;
-    border: 1px solid #aaa;
+    box-shadow: none;
   }
 
 
