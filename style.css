@@ -401,6 +401,10 @@ a:hover, a:visited, a:active, a:link {
   border-bottom: 1px solid black;
 }
 
+.site__footer a {
+  color: rgb(255, 255, 255);
+}
+
 ul > li,
 ol > li {
   padding: 3px;
@@ -438,12 +442,13 @@ strong {
 }
 
 .site__footer section {
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid rgb(50, 44, 43);
   flex: 1 1 200px;
   text-align: center;
   padding: 1% 0;
   color: #ffffff;
-  background-color: rgb(64, 56, 55);
+  background: linear-gradient(0deg, rgb(114, 101, 98) 0%, rgb(50, 44, 43) 100%);
+  padding-bottom: clamp(6.25rem, 1.4423rem + 15.3846vw, 18.75rem);
 }
 
 .titre {
