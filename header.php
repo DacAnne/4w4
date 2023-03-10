@@ -6,11 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head(); ?>
 </head>
+<!-- <?php
+    $nouvelle_classe = "";
+    if(is_front_page()){
+        $nouvelle_classe = 'no-aside';
+    } 
+?> -->
+<!-- <body class="site  <?= $nouvelle_classe ?>"> -->
 <body class="site  <?php echo (is_front_page()?'no-aside':'') ?>">
     <header class="site__header">
-        
         <section class="site__header__logo">
-            <div class="logomenu">
+            <div class="menu__recherche">
+                <input type="checkbox" id="chkMenu">
                 <?php the_custom_logo(); ?>
                 <?php wp_nav_menu(array(
                     "menu" => "entete",
@@ -18,6 +25,7 @@
                 )) ?>
             </div>    
             <?php get_search_form() ?>
+            <label class="burger" for="chkMenu"><img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=000" width="32" height="32"></label>
         </section>
         
     </header>

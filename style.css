@@ -321,6 +321,10 @@ template {
 }
 
 /* --------------------------------------------- base */
+html {
+  overflow-x: hidden;
+}
+
 /* 
 Clamp font-size generator *
 https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6IjUwMHB4IiwibWF4V2lkdGgiOiIxODAwcHgiLCJtaW5Gb250U2l6ZSI6IjE0cHgiLCJtYXhGb250U2l6ZSI6IjUycHgifQ%3D%3D
@@ -453,11 +457,11 @@ strong {
 
 .titre {
   padding-bottom: 2rem;
-  padding-left: clamp(0rem, -0.7692rem + 2.4615vw, 2rem);
+  padding-left: clamp(2rem, 1.6154rem + 1.2308vw, 3rem);
 }
 
 main {
-  padding: 3rem;
+  padding: clamp(1rem, 0.2308rem + 2.4615vw, 3rem);
   border-top: 1px solid black;
 }
 main article {
@@ -470,6 +474,7 @@ main article {
   flex-wrap: wrap;
   gap: 2rem;
 }
+
 .blocflex__article {
   display: flex;
   flex: 1 0 300px;
@@ -489,6 +494,9 @@ main article {
   box-shadow: none;
 }
 
+.site__header {
+  overflow-x: hidden;
+}
 .site__header h1, .site__header h2 {
   padding-left: clamp(3.5rem, 2.9231rem + 1.8462vw, 5rem);
 }
@@ -499,18 +507,31 @@ main article {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0 3rem;
+  padding: 0 clamp(1rem, 0.2308rem + 2.4615vw, 3rem);
   padding-top: 10px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: large;
 }
 
-.logomenu {
+#chkMenu:checked ~ .menu-entete-container {
+  transform: translateX(0);
+}
+
+.menu__recherche {
   display: flex;
   align-items: center;
 }
 
 /* ------------------------------------------------ Menu-entete */
+.menu-entete-container {
+  transform: translateX(800px);
+  transition: transform 0.5s;
+}
+@media screen and (min-width: 1000px) {
+  .menu-entete-container {
+    transform: none;
+  }
+}
 .menu-entete-container .menu {
   display: flex;
   list-style-type: none;
@@ -538,6 +559,25 @@ form button {
   border-radius: 0 1rem 1rem 0;
 }
 
+/********* bouton burger *************/
+.burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.burger img {
+  filter: invert(1);
+}
+@media screen and (min-width: 1000px) {
+  .burger {
+    display: none;
+  }
+}
+
+#chkMenu {
+  display: none;
+}
+
 /**
 * Mise en page général avec display grid
 */
@@ -559,13 +599,28 @@ form button {
   background-color: rgb(64, 56, 55);
   text-align: center;
 }
+.site__aside ul {
+  padding: 0;
+  margin: 0;
+}
+@media screen and (min-width: 1000px) {
+  .site__aside ul {
+    padding-left: 1rem;
+  }
+}
 .site__aside h4 {
   padding: 0;
-  padding-top: 5px;
+  padding: 5px 0;
+  color: cadetblue;
   margin: 0;
   text-align: center;
-  color: aliceblue;
-  font-size: clamp(1rem, 0.8077rem + 0.6154vw, 1.5rem);
+  font-size: clamp(1.5rem, 0.8077rem + 0.6154vw, 1.5rem);
+}
+@media screen and (min-width: 1000px) {
+  .site__aside h4 {
+    text-align: left;
+    padding-left: 1rem;
+  }
 }
 
 .site {
@@ -595,9 +650,12 @@ form button {
   }
 }
 
+.no-aside {
+  grid-template-areas: "header" "main" "footer";
+}
 @media screen and (min-width: 1000px) {
   .no-aside {
     grid-template-columns: auto;
-    grid-template-areas: "header" "aside" "main" "footer";
+    grid-template-areas: "header" "main" "footer";
   }
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,19 @@
+/********* bouton burger *************/
+.burger{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    img{
+        filter: invert(1);
+    }
+
+    @media screen and (min-width:$largeur__bureau){
+        display: none;
+    }
+}
+
+
+#chkMenu{
+    display: none;
+}

@@ -1,9 +1,9 @@
 .titre{
     padding-bottom: 2rem;
-    padding-left: clamp(0rem, -0.7692rem + 2.4615vw, 2rem);
+    padding-left: clamp(2rem, 1.6154rem + 1.2308vw, 3rem);
 }
 main{
-    padding:3rem;
+    padding: clamp(1rem, 0.2308rem + 2.4615vw, 3rem);
     border-top: 1px solid black;
     // background: linear-gradient(#e66465, #9198e5);
     article{

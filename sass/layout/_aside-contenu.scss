@@ -19,15 +19,27 @@
     grid-area: aside; 
     background-color: rgb(64, 56, 55);
     text-align: center;
+
+    ul{
+      padding: 0;
+      margin: 0;
+      @media screen and (min-width:$largeur__bureau){
+        padding-left: 1rem;
+     }
+    }
     // display: none;
 
     h4{
       padding: 0;
-      padding-top: 5px;
+      padding: 5px 0;
+      color: cadetblue;
       margin: 0;
       text-align: center;
-      color: aliceblue;
-      font-size: clamp(1rem, 0.8077rem + 0.6154vw, 1.5rem);;
+      font-size: clamp(1.5rem, 0.8077rem + 0.6154vw, 1.5rem);
+      @media screen and (min-width:$largeur__bureau){
+        text-align: left;
+        padding-left: 1rem;
+     }
     }
   }
 
@@ -74,11 +86,14 @@
   }
 
   .no-aside{
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
     @media screen and (min-width: 1000px){
       grid-template-columns: auto;
       grid-template-areas:
         "header"
-        "aside"
         "main"
         "footer";
 
