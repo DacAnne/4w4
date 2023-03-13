@@ -7,6 +7,9 @@ wp_enqueue_style(
                 array(), //les fichiers css qui dépendent de style.css
                 filemtime(get_template_directory() . '/style.css') // version de notre style.css
                );
+
+wp_enqueue_style("style-google-font", "https://fonts.googleapis.com/css2?family=Quicksand&display=swap", false );
+
 }
 
 add_action( 'wp_enqueue_scripts', 'ajouter_styles' );
@@ -27,7 +30,9 @@ function personnalisation_menu_item_title($title, $item, $args, $depth) {
     // Remplacer 'nom_de_votre_menu' par l'identifiant de votre menu
     if($args->menu == 'cours') {
 // Modifier la longueur du titre en fonction de vos besoins
-$title = wp_trim_words($title, 3, ' ... '); // on garde uniquement 3 mots pour le titre du choix
+$sigle = substr($title,0,7);
+$title = substr($title,7);
+$title = "<code>" . $sigle . "</code>" . "<p> - " .wp_trim_words($title, 2, ' ... ') . "</p>";  // on garde uniquement 3 mots pour le titre du choix
 }
 return $title;
 }
