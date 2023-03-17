@@ -442,17 +442,28 @@ strong {
 .site__footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
+  background: linear-gradient(0deg, rgb(114, 101, 98) 0%, rgb(64, 56, 55) 100%);
 }
 
 .site__footer section {
-  border: 1px solid rgb(50, 44, 43);
   flex: 1 1 200px;
   text-align: center;
   padding: 1% 0;
   color: #ffffff;
-  background: linear-gradient(0deg, rgb(114, 101, 98) 0%, rgb(50, 44, 43) 100%);
-  padding-bottom: clamp(6.25rem, 1.4423rem + 15.3846vw, 18.75rem);
+}
+.site__footer section p {
+  font-family: "Quicksand", sans-serif;
+}
+.site__footer section .logo-secondaire {
+  border-radius: 50%;
+}
+.site__footer section ul li:nth-child(1) img, .site__footer section li:nth-child(2) img {
+  filter: invert(1);
+}
+.site__footer section ul li:hover img {
+  filter: invert(0);
 }
 
 .titre {
@@ -478,6 +489,7 @@ main article {
 .blocflex__article {
   display: flex;
   flex: 1 0 300px;
+  background-color: rgb(249, 239, 206);
   border: 1px black solid;
   flex-direction: column;
   padding: 1em;
@@ -490,8 +502,38 @@ main article {
 }
 
 .blockflex__galerie {
+  display: flex;
   flex: 1 0 100%;
   box-shadow: none;
+}
+.blockflex__galerie figure {
+  transform-origin: center left;
+  transform: ScaleX(1);
+  transition: transform 0.5s;
+}
+.blockflex__galerie img {
+  border-radius: 20%;
+}
+.blockflex__galerie img:hover {
+  scale: 1.2;
+  z-index: 1;
+  transition: scale 0.5 s;
+}
+.blockflex__galerie label {
+  position: absolute;
+  scale: 2;
+}
+.blockflex__galerie label::before {
+  content: "⮜";
+}
+.blockflex__galerie #replis {
+  display: none;
+}
+.blockflex__galerie #replis:checked ~ label {
+  transform: rotate(180deg);
+}
+.blockflex__galerie #replis:checked ~ figure {
+  transform: ScaleX(0);
 }
 
 .site__header {
@@ -580,7 +622,10 @@ form button {
 
 .menu-cours-container .menu {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 @media screen and (min-width: 1000px) {
   .menu-cours-container .menu {
@@ -592,6 +637,12 @@ form button {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 1000px) {
+  .menu-cours-container .menu .menu-item {
+    justify-content: left;
+  }
 }
 .menu-cours-container .menu .menu-item a {
   display: flex;
@@ -640,7 +691,7 @@ form button {
 }
 @media screen and (min-width: 1000px) {
   .site__aside ul {
-    padding-left: 1rem;
+    padding-left: clamp(0.5rem, 0.3077rem + 0.6154vw, 1rem);
   }
 }
 .site__aside h4 {
@@ -654,7 +705,7 @@ form button {
 @media screen and (min-width: 1000px) {
   .site__aside h4 {
     text-align: left;
-    padding-left: 1rem;
+    padding-left: clamp(0.5rem, 0.3077rem + 0.6154vw, 1rem);
   }
 }
 
@@ -665,7 +716,7 @@ form button {
 }
 @media screen and (min-width: 1000px) {
   .site {
-    grid-template-columns: 18% auto;
+    grid-template-columns: 23% auto;
     grid-template-areas: "header header" "aside main" "footer footer";
     row-gap: 0px;
   }
@@ -676,7 +727,7 @@ form button {
 }
 @media screen and (min-width: 1500px) {
   .site {
-    grid-template-columns: 13% auto;
+    grid-template-columns: 18% auto;
     grid-template-areas: "header header" "aside main" "footer footer";
     row-gap: 0px;
   }

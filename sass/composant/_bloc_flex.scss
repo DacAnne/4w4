@@ -18,6 +18,7 @@
   .blocflex__article {
     display: flex;
     flex: 1 0 300px;
+    background-color: rgb(249, 239, 206);
     border: 1px black solid;
     flex-direction: column;
     padding: 1em;
@@ -29,9 +30,39 @@
     }
   }
   .blockflex__galerie{
+    display: flex;
     flex: 1 0 100% ;
     box-shadow: none;
+    figure{
+      transform-origin: center left;
+      transform: ScaleX(1);
+      transition: transform .5s;
+    }
+    img{ border-radius: 20%;}
+    img:hover{
+      scale: 1.2;
+      z-index: 1;
+      transition: scale 0.5 s;
+    }
+    label{
+      position: absolute;
+      scale: 2;
+
+    }
+    label::before {
+      content: '\2B9C';
   }
+  #replis{
+    display: none;
+  }
+  #replis:checked ~ label {
+    transform: rotate(180deg);
+  }
+  #replis:checked ~ figure {
+    transform: ScaleX(0);
+}
+  }
+
 
 
   

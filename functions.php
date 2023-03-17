@@ -32,7 +32,7 @@ function personnalisation_menu_item_title($title, $item, $args, $depth) {
 // Modifier la longueur du titre en fonction de vos besoins
 $sigle = substr($title,0,7);
 $title = substr($title,7);
-$title = "<code>" . $sigle . "</code>" . "<p> - " .wp_trim_words($title, 2, ' ... ') . "</p>";  // on garde uniquement 3 mots pour le titre du choix
+$title = "<code>" . $sigle . "</code>" . "<p> : " .wp_trim_words($title, 2, ' ... ') . "</p>";  // on garde uniquement 3 mots pour le titre du choix
 }
 return $title;
 }

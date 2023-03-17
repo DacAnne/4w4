@@ -24,7 +24,7 @@
       padding: 0;
       margin: 0;
       @media screen and (min-width:$largeur__bureau){
-        padding-left: 1rem;
+        padding-left: clamp(0.5rem, 0.3077rem + 0.6154vw, 1rem);
      }
     }
     // display: none;
@@ -38,7 +38,7 @@
       font-size: clamp(1.5rem, 0.8077rem + 0.6154vw, 1.5rem);
       @media screen and (min-width:$largeur__bureau){
         text-align: left;
-        padding-left: 1rem;
+        padding-left: clamp(0.5rem, 0.3077rem + 0.6154vw, 1rem);
      }
     }
   }
@@ -55,7 +55,7 @@
    
   
     @media screen and (min-width: 1000px){
-      grid-template-columns: 18% auto;
+      grid-template-columns: 23% auto;
       grid-template-areas:
         "header header"
         "aside main"
@@ -69,7 +69,7 @@
           }
     }
     @media screen and (min-width: 1500px) {
-        grid-template-columns: 13% auto;
+        grid-template-columns: 18% auto;
         grid-template-areas:
           "header header"
           "aside main"

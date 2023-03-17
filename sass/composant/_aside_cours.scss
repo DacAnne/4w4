@@ -3,7 +3,11 @@
     .menu{
         //ul
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        
         
         @media screen and (min-width: $largeur__bureau) {
             display: flex;
@@ -15,10 +19,16 @@
             display: flex;
             flex-direction: row;
             align-items: center;
+            justify-content: center;
+            @media screen and (min-width: $largeur__bureau) {
+               justify-content: left;
+                
+            }
             a{
                 display: flex;
                 flex-direction: row;
                 align-items: center;
+               
                 code{
                     display: block;
                     white-space: nowrap;

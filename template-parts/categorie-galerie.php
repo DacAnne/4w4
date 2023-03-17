@@ -4,7 +4,9 @@
  */
    
 ?>
-
 <article class="blockflex__galerie">
-    <?= the_content(); ?>
+    <input type="checkbox" id="replis">
+        <?= the_content(); ?>
+    <label class="arrow" for="replis"></label>
+
 </article>

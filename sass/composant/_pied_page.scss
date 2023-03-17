@@ -1,15 +1,26 @@
 .site__footer{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
+    background: linear-gradient(0deg, rgb(114, 101, 98) 0%, rgb(64, 56, 55) 100%);
+    
 }
 .site__footer section{
-    border: 1px solid rgb(50, 44, 43);
+    p{ font-family: "Quicksand", sans-serif;}
+   
     flex: 1 1 200px;
     text-align: center;
     padding: 1% 0;
     color: #ffffff;
-    background: linear-gradient(0deg, rgb(114, 101, 98) 0%, rgb(50, 44, 43) 100%);
-    padding-bottom: clamp(6.25rem, 1.4423rem + 15.3846vw, 18.75rem);
+   .logo-secondaire{
+    border-radius: 50%;
+   }
+   ul li:nth-child(1),li:nth-child(2){
+    img{filter: invert(1)}
+   }
+   ul li:hover{
+    img{filter: invert(0);}
+   }
 }
 
