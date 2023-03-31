@@ -11,7 +11,7 @@
         <div class="information">
             <h5><?= $titre_long ?></h5>
             <p>Sigle: <?= $sigle ?> </p>
-            <p><?= $duree ?></p>
+            <p>Durée: <?= $duree ?></p>
             <p>Enseignant: <?php the_field('enseignant'); ?></p>
             <p>Domaine: <?php the_field('domaine'); ?> 
         </div>

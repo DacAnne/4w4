@@ -11,14 +11,17 @@
     .information{
         width: 100%;
         padding: 0.5rem;
-        background-color: rgba(79, 79, 155, 0.2);
+        background-color: rgba(64, 38, 17, 0.8);
 
         h5{
             text-decoration: underline;
             padding-left: 1rem;
+            color: rgb(245, 224, 161);
+            text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
         }
         p{
             padding-left: 1rem; 
+            color: rgb(245, 224, 161);
         }
     }
     .description{
@@ -27,15 +30,13 @@
     }
 
 }
-
-@media screen and (min-width: $largeur__bureau) {
+@media screen and (min-width: $largeur__tablette) {
     
     .main__search{
      width: 95vw;
     }
     .article__search{
-        box-shadow: none;
-        display: flex;
+
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
@@ -43,21 +44,34 @@
         .information{
             flex: 0 1 300px;
             width: auto;
-            padding: 0.5rem;
-            background-color: rgba(79, 79, 155, 0.2);
-    
-            h5{
-                text-decoration: underline;
-                padding-left: 1rem;
-            }
-            p{
-                padding-left: 1rem; 
-            }
         }
         .description{
             flex: 1 1 600px;
-            padding: 1rem 0 ;
-            padding-bottom: 3rem;
+            padding-left: 3rem;
+        }
+    
+    }
+    
+}
+
+
+@media screen and (min-width: $largeur__bureau) {
+    
+    .main__search{
+     width: 90vw;
+    }
+    .article__search{
+
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        
+        .information{
+            flex: 0 1 300px;
+            width: auto;
+        }
+        .description{
+            flex: 1 1 600px;
             padding-left: 3rem;
         }
     
