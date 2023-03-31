@@ -7,7 +7,7 @@
     $titre_long = substr($titre,7,-5);
     $duree = substr($titre, strpos($titre, '('));
 ?>
-    <article class="cours">
+    <article class="article__search">
         <div class="information">
             <h5><?= $titre_long ?></h5>
             <p>Sigle: <?= $sigle ?> </p>

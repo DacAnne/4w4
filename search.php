@@ -5,7 +5,7 @@
  */
 ?>
 <?php get_header();?>
-<main>
+<main class="main-search">
 
     <h2>Résultats de la recherche</h2>
 

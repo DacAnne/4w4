@@ -1,0 +1,30 @@
+.main__search{
+    
+}
+.article__search{
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+    .information{
+        width: 100%;
+        padding: 0.5rem;
+        background-color: rgba(79, 79, 155, 0.2);
+
+        h5{
+            text-decoration: underline;
+            padding-left: 1rem;
+        }
+        p{
+            padding-left: 1rem; 
+        }
+    }
+    .description{
+        padding: 1rem 0 ;
+        padding-bottom: 3rem;
+    }
+
+}
+

@@ -664,6 +664,30 @@ form button {
   }
 }
 
+.article__search {
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.article__search .information {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: rgba(79, 79, 155, 0.2);
+}
+.article__search .information h5 {
+  text-decoration: underline;
+  padding-left: 1rem;
+}
+.article__search .information p {
+  padding-left: 1rem;
+}
+.article__search .description {
+  padding: 1rem 0;
+  padding-bottom: 3rem;
+}
+
 /**
 * Mise en page général avec display grid
 */
