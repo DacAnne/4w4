@@ -5,8 +5,9 @@
 
 ## L\'objectif de l'examen intra:
 
-- Le design général permettra de mettre en valeur le progamme TIM du collège de Maisonneuve
-- Continuer de faire progresser votre thème
+- Adapter le modèle search.php pour reproduire la maquette incluse avec le devis
+- Adapter au largeur d'écran
+- Création d'une branche intra avec min 5 commit
 - Déployer votre projet sur le serveur **_Siteground_**
 
 #### Référence

@@ -1,15 +1,22 @@
 <?php
 /**
- * Modèle par défaut
+ * Modèle category par défaut
  * 
  */
 ?>
 <?php get_header();?>
 <main>
-    <h3>Search.php</h3>
     <h2>Résultats de la recherche</h2>
-    <?php  get_template_part("template-parts/search-4w4");?>
-   
-    <!-- <h1> Bienvenue au cours de 4w4</h1> -->
+
+    <?php
+        if (in_category('cours')){    
+            $ma_categorie = 'cours';
+        }
+        else{
+            $ma_categorie = '4w4';
+        }
+        get_template_part('template-parts/search', $ma_categorie);
+    ?>
+
 </main>
 <?php get_footer();?>
