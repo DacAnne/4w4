@@ -9,4 +9,9 @@
         <?= the_content(); ?>
     <label class="arrow" for="replis"></label>
 
+    <?php
+    // the_content(); affiche tout le contenu global du post
+    // the_excerpt(); affiche la partie textuelle (résumé avec extrait) wp_trim_words pour raccourcir
+    ?>
+
 </article>
