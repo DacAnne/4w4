@@ -28,3 +28,40 @@
 
 }
 
+@media screen and (min-width: $largeur__bureau) {
+    
+    .main__search{
+     width: 95vw;
+    }
+    .article__search{
+        box-shadow: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        
+        .information{
+            flex: 0 1 300px;
+            width: auto;
+            padding: 0.5rem;
+            background-color: rgba(79, 79, 155, 0.2);
+    
+            h5{
+                text-decoration: underline;
+                padding-left: 1rem;
+            }
+            p{
+                padding-left: 1rem; 
+            }
+        }
+        .description{
+            flex: 1 1 600px;
+            padding: 1rem 0 ;
+            padding-bottom: 3rem;
+            padding-left: 3rem;
+        }
+    
+    }
+    
+}
+

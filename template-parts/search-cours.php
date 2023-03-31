@@ -15,7 +15,7 @@
             <p>Enseignant: <?php the_field('enseignant'); ?></p>
             <p>Domaine: <?php the_field('domaine'); ?> 
         </div>
-        <div class="description"> <p><?= wp_trim_words(get_the_excerpt(), 45, "[...]") ?></p></div>
+        <div class="description"> <p><?= wp_trim_words(get_the_excerpt(), 70, "[...]") ?></p></div>
     </article>
 
     <hr>
