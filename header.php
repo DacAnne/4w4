@@ -13,7 +13,7 @@
     } 
 ?> -->
 <!-- <body class="site  <?= $nouvelle_classe ?>"> -->
-<body class="site  <?php echo (is_front_page()?'no-aside':'') ?>">
+<body class="site  <?php echo (is_front_page() || is_search() ? 'no-aside':'') ?>">
     <header class="site__header">
         <section class="site__header__logo">
             <div class="menu__recherche">

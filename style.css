@@ -726,6 +726,7 @@ form button {
   .article__search .description {
     flex: 1 1 600px;
     padding-left: 3rem;
+    font-size: 1.3rem;
   }
 }
 /**
