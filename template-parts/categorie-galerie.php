@@ -13,5 +13,5 @@
     // the_content(); affiche tout le contenu global du post
     // the_excerpt(); affiche la partie textuelle (résumé avec extrait) wp_trim_words pour raccourcir
     ?>
-
+    <p style="background-color:<?php the_field('couleur'); ?>;"><a href="<?php the_field('lien'); ?>"><?php the_field('alt'); ?></a></p>
 </article>
