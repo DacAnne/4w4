@@ -1,4 +1,4 @@
-# lab4
+# lab4 (2 points)
 ## 4w4 - Conception d'interface et développement Web
 ### Auteur : Nguyen, Dac Anne 
 #### Description
@@ -6,6 +6,11 @@
 ## L\'objectif du TP1:
 
 - Correction de l'examen intra
+- Ajouter quelques champs personnalisés pour la page d'accueil
+- Explorer les types de champs
+- Débuter le carrousel
+- Afficher le conteneur du carrousel avec une animation
+-Afficher les images de la galerie dans le carrousel
 - Continuer de faire progresser votre thème
 - Déployer votre projet sur le serveur **_Siteground_**
 

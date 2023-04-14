@@ -506,11 +506,6 @@ main article {
   flex: 1 0 100%;
   box-shadow: none;
 }
-.blockflex__galerie figure {
-  transform-origin: center left;
-  transform: ScaleX(1);
-  transition: transform 0.5s;
-}
 .blockflex__galerie img {
   border-radius: 20%;
 }
@@ -518,22 +513,6 @@ main article {
   scale: 1.2;
   z-index: 1;
   transition: scale 0.5 s;
-}
-.blockflex__galerie label {
-  position: absolute;
-  scale: 2;
-}
-.blockflex__galerie label::before {
-  content: "⮜";
-}
-.blockflex__galerie #replis {
-  display: none;
-}
-.blockflex__galerie #replis:checked ~ label {
-  transform: rotate(180deg);
-}
-.blockflex__galerie #replis:checked ~ figure {
-  transform: ScaleX(0);
 }
 
 .site__header {

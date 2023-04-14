@@ -5,9 +5,9 @@
    
 ?>
 <article class="blockflex__galerie">
-    <input type="checkbox" id="replis">
+    <!-- <input type="checkbox" id="replis"> -->
         <?= the_content(); ?>
-    <label class="arrow" for="replis"></label>
+    <!-- <label class="arrow" for="replis"></label> -->
 
     <?php
     // the_content(); affiche tout le contenu global du post
