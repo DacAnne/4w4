@@ -439,14 +439,14 @@ strong {
 }
 
 /* --------------------------------------------- composant */
-.site__footer {
+.site__footer section:first-of-type {
   padding: 1rem;
   display: block;
   text-align: center;
   background: linear-gradient(0deg, rgb(114, 101, 98) 0%, rgb(64, 56, 55) 100%);
 }
 @media screen and (min-width: 1000px) {
-  .site__footer {
+  .site__footer section:first-of-type {
     padding: 3rem;
     display: flex;
     text-align: left;
@@ -456,13 +456,29 @@ strong {
   }
 }
 
-.site__footer section {
+.autres {
+  border-top: 1px solid rgb(75, 67, 65);
+  padding: 0 3rem;
+  display: block;
+  text-align: center;
+  background: linear-gradient(0deg, rgb(17, 17, 17) 0%, rgb(114, 101, 98) 100%);
+}
+@media screen and (min-width: 1000px) {
+  .autres {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+.site__footer section > div {
   flex: 1 1 200px;
   text-align: center;
   padding: 1% 0;
   color: #ffffff;
 }
-.site__footer section p {
+.site__footer section > div p {
   font-family: "Quicksand", sans-serif;
 }
 
