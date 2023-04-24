@@ -4,6 +4,16 @@
     flex-wrap: wrap;
     gap: 2rem;
 }
+.blocflex:first-of-type{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  min-height: 20vh;
+  background-color: rgba(131, 113, 62, 0.282);
+  margin-bottom: 5rem;
+}
+
 
 // .blocflex {
 //     display: grid;

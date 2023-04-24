@@ -12,7 +12,14 @@
         <h1><a href="<?= bloginfo('url')?>"><?= bloginfo('name')?></a></h1>
         <h2><?= bloginfo('description')?></h2>
     </div>
-
+    <section class="blocflex">
+        <?php 
+            wp_nav_menu(array(
+                "menu" => "evenement",
+                "container" => "nav"
+            ));
+        ?>
+    </section>
     <section class="blocflex">
         <?php 
             if(have_posts()):
