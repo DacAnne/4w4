@@ -677,6 +677,10 @@ form button {
   justify-content: space-between;
   border: 1px solid #aaa;
   height: 50px;
+  margin: 10px;
+}
+.menu-evenement-container .menu a {
+  font-size: 1.5rem;
 }
 
 /**
