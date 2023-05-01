@@ -53,11 +53,12 @@ function ajouter_description_class_menu( $items, $args ) {
             // Récupérer le titre, la description et la classe personnalisée
             $titre = $item->title;
             $description = $item->description;
+            $description = substr($description, 0, 10);
             //$classe = $item->class; // Remplacer par le nom de la classe souhaitée
             
 
             // Ajouter la description et la classe personnalisée à l'élément de menu
-            $item->title .= '<span >' . $description . '</span>';
+            $item->title .= '<span >  - ' . $description . '...</span>';
             // $item->title .= '<span class="' . $classe . '">' . $description . '</span>';
         }
     }
