@@ -6,11 +6,30 @@
             flex-direction: column;
             justify-content: space-between;
             border: 1px solid #aaa;
-            height: 50px;
+            background-color: rgb(96, 85, 74);
+            //height: 50px;
             margin: 10px;
         }
         a{
-            font-size: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+           
+            
+            .title{
+                font-size: 1rem;
+                display: block;
+            }
+            .description{
+                font-size: .8rem;
+            }
+            .menu-thumbnail{
+                display: block;
+                width: 150px;
+                height: 150px;
+            }
         }
     }
 }

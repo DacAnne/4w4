@@ -45,26 +45,26 @@ add_filter('nav_menu_item_title', 'personnalisation_menu_item_title', 10, 4);
 /**
  * Pour ajouter la description des évènements dans le menu évènement 
  */
-function ajouter_description_class_menu( $items, $args ) {
-    // Vérifier si le menu correspondant est celui que vous souhaitez modifier
-    if ( 'evenement' === $args->menu ) {
-        foreach ( $items as $item ) {
-            //var_dump($item);
-            // Récupérer le titre, la description et la classe personnalisée
-            $titre = $item->title;
-            $description = $item->description;
-            $description = substr($description, 0, 10);
-            //$classe = $item->class; // Remplacer par le nom de la classe souhaitée
+// function ajouter_description_class_menu( $items, $args ) {
+//     // Vérifier si le menu correspondant est celui que vous souhaitez modifier
+//     if ( 'evenement' === $args->menu ) {
+//         foreach ( $items as $item ) {
+//             //var_dump($item);
+//             // Récupérer le titre, la description et la classe personnalisée
+//             $titre = $item->title;
+//             $description = $item->description;
+//             $description = substr($description, 0, 30);
+//             //$classe = $item->class; // Remplacer par le nom de la classe souhaitée
             
 
-            // Ajouter la description et la classe personnalisée à l'élément de menu
-            $item->title .= '<span >  - ' . $description . '...</span>';
-            // $item->title .= '<span class="' . $classe . '">' . $description . '</span>';
-        }
-    }
-    return $items;
-}
-add_filter( 'wp_nav_menu_objects', 'ajouter_description_class_menu', 10, 2 );
+//             // Ajouter la description et la classe personnalisée à l'élément de menu
+//             $item->title .= '<span >  - ' . $description . '...</span>';
+//             // $item->title .= '<span class="' . $classe . '">' . $description . '</span>';
+//         }
+//     }
+//     return $items;
+// }
+// add_filter( 'wp_nav_menu_objects', 'ajouter_description_class_menu', 10, 2 );
 
 /********************************************* add_theme_support() */
 add_theme_support('title-tag');
@@ -96,6 +96,23 @@ function cidweb_modifie_requete_principal($query)
 add_action('pre_get_posts', 'cidweb_modifie_requete_principal');
     // écouteur de hook
 
+    /** 
+     * Modifie les items du menu << evenement >> pour inclure l'image en avant plan du post
+     * la description du choix et le titre du choix
+     */
+function add_menu_description_and_thumbnail( $item_output, $item, $depth, $args ) {
+    if ( 'evenement' == $args->menu) {
+        $post_thumbnail_id = get_post_thumbnail_id( $item->object_id );
+        if ( $post_thumbnail_id ) {
+            $post_thumbnail_url = wp_get_attachment_image_src( $post_thumbnail_id, 'thumbnail' );
+            $item_output = str_replace( '">' . $args->link_before . $item->title, '">' . $args->link_before . '<span class="title">' . $item->title . '</span><span class="description">' . $item->description . '</span><img src="' . esc_url( $post_thumbnail_url[0] ) . '" class="menu-thumbnail" />', $item_output );
+        } else {
+            $item_output = str_replace( '">' . $args->link_before . $item->title, '">' . $args->link_before . '<span class="title">' . $item->title . '</span><span class="description">' . $item->description . '</span>', $item_output );
+        }
+    }
+    return $item_output;
+}
+add_filter( 'walker_nav_menu_start_el', 'add_menu_description_and_thumbnail', 10, 4 );
 
 /* -------------------------------------------------- Enregistrer le sidebar ---*/
 function enregistrer_sidebar() {

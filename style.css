@@ -508,7 +508,6 @@ main article {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 2rem;
-  min-height: 20vh;
   background-color: rgba(131, 113, 62, 0.282);
   margin-bottom: 5rem;
 }
@@ -676,11 +675,27 @@ form button {
   flex-direction: column;
   justify-content: space-between;
   border: 1px solid #aaa;
-  height: 50px;
+  background-color: rgb(96, 85, 74);
   margin: 10px;
 }
 .menu-evenement-container .menu a {
-  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.menu-evenement-container .menu a .title {
+  font-size: 1rem;
+  display: block;
+}
+.menu-evenement-container .menu a .description {
+  font-size: 0.8rem;
+}
+.menu-evenement-container .menu a .menu-thumbnail {
+  display: block;
+  width: 150px;
+  height: 150px;
 }
 
 /**
