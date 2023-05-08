@@ -508,8 +508,14 @@ main article {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 2rem;
+  width: 100%;
   background-color: rgba(131, 113, 62, 0.282);
   margin-bottom: 5rem;
+}
+@media screen and (min-width: 800px) {
+  .blocflex:first-of-type {
+    display: block;
+  }
 }
 
 .blocflex__article {
@@ -669,6 +675,9 @@ form button {
 
 .menu-evenement-container .menu {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
 }
 .menu-evenement-container .menu .menu-item {
   display: flex;
@@ -684,13 +693,24 @@ form button {
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  padding: 0 1rem;
+  width: 300px;
+  font-family: monospace;
+}
+@media screen and (min-width: 1000px) {
+  .menu-evenement-container .menu a {
+    width: 400px;
+  }
 }
 .menu-evenement-container .menu a .title {
-  font-size: 1rem;
+  font-size: 1.3rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
   display: block;
+  padding: 5px 0;
 }
 .menu-evenement-container .menu a .description {
   font-size: 0.8rem;
+  padding-bottom: 10px;
 }
 .menu-evenement-container .menu a .menu-thumbnail {
   display: block;
