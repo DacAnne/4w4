@@ -504,20 +504,14 @@ main article {
 }
 
 .blocflex:first-of-type {
+  width: 95vw;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 2rem;
-  width: 100%;
+  gap: 1rem;
   background-color: rgba(131, 113, 62, 0.282);
   margin-bottom: 5rem;
 }
-@media screen and (min-width: 800px) {
-  .blocflex:first-of-type {
-    display: block;
-  }
-}
-
 .blocflex__article {
   display: flex;
   flex: 1 0 300px;
@@ -525,6 +519,7 @@ main article {
   border: 1px black solid;
   flex-direction: column;
   padding: 1em;
+  margin-top: 1em;
   order: 2;
   justify-content: space-between;
 }
@@ -673,11 +668,14 @@ form button {
   }
 }
 
+.menu-evenement-container {
+  width: 85%;
+}
 .menu-evenement-container .menu {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;
   padding: 0;
+  justify-content: center;
 }
 .menu-evenement-container .menu .menu-item {
   display: flex;
@@ -716,6 +714,53 @@ form button {
   display: block;
   width: 150px;
   height: 150px;
+}
+
+.menu-bloc-archive-container .menu .menu-item a {
+  background-repeat: no-repeat;
+  display: block;
+}
+
+.bloc__cours a {
+  background-image: url(https://s2.svgbox.net/octicons.svg?ic=mortar-board);
+}
+
+.bloc__4w4 a {
+  background-image: url(https://s2.svgbox.net/octicons.svg?ic=repo-bold);
+}
+
+.menu-bloc-archive-container {
+  border-top: black solid 1px;
+  width: 45%;
+}
+.menu-bloc-archive-container .menu {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  justify-content: center;
+}
+.menu-bloc-archive-container .menu .menu-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #aaa;
+  background-color: rgb(96, 85, 74);
+  margin: 10px;
+}
+
+.menu-bloc-archive-container .menu .menu-item a {
+  padding-left: 1.5rem;
+  width: 200px;
+  background-repeat: no-repeat;
+  display: block;
+}
+
+.bloc__cours a {
+  background-image: url(https://s2.svgbox.net/octicons.svg?ic=mortar-board);
+}
+
+.bloc__4w4 a {
+  background-image: url(https://s2.svgbox.net/octicons.svg?ic=repo-bold);
 }
 
 /**

@@ -1,9 +1,10 @@
 .menu-evenement-container{
+    width: 85%;
     .menu{ //ul
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-wrap: nowrap;
         padding: 0;
+        justify-content: center;
         .menu-item{//li
             display: flex;
             flex-direction: column;
@@ -45,4 +46,14 @@
             }
         }
     }
+}
+.menu-bloc-archive-container .menu .menu-item a{
+    background-repeat: no-repeat;
+    display: block;
+}
+.bloc__cours a{
+    background-image: url(https://s2.svgbox.net/octicons.svg?ic=mortar-board);
+}
+.bloc__4w4 a{
+    background-image: url(https://s2.svgbox.net/octicons.svg?ic=repo-bold);
 }

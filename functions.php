@@ -88,7 +88,7 @@ add_theme_support('custom-background');
 function cidweb_modifie_requete_principal($query)
 {
     if ($query->is_home() && $query->is_main_query() && !is_admin()) {
-        $query->set('category_name', '4w4');
+        $query->set('category_name', 'Accueil');
         $query->set('orderby', 'title');
         $query->set('order', 'ASC');
     }
@@ -101,7 +101,7 @@ add_action('pre_get_posts', 'cidweb_modifie_requete_principal');
      * la description du choix et le titre du choix
      */
 function add_menu_description_and_thumbnail( $item_output, $item, $depth, $args ) {
-    if ( 'evenement' == $args->menu) {
+    if ( 'evenement' == $args->menu || 'bloc-archive' == $args->menu) {
         $post_thumbnail_id = get_post_thumbnail_id( $item->object_id );
         if ( $post_thumbnail_id ) {
             $post_thumbnail_url = wp_get_attachment_image_src( $post_thumbnail_id, 'thumbnail' );

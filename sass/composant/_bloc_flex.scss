@@ -5,16 +5,16 @@
     gap: 2rem;
 }
 .blocflex:first-of-type{
+  width: 95vw;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 2rem;
-  width: 100%;
+  gap: 1rem;
   //min-height: 40vh;
   background-color: rgba(131, 113, 62, 0.282);
   margin-bottom: 5rem;
   @media screen and (min-width: $largeur__tablette) {
-    display: block;
+    //display: block;
   }
 }
 
@@ -36,6 +36,7 @@
     border: 1px black solid;
     flex-direction: column;
     padding: 1em;
+    margin-top: 1em;
     order: 2;
     justify-content: space-between;
     h3,h5,h6,p{

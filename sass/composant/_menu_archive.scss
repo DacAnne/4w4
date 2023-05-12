@@ -1,0 +1,32 @@
+.menu-bloc-archive-container{
+    border-top: black solid 1px;
+    width: 45%;
+    .menu{ //ul
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        justify-content: center;
+        .menu-item{//li
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+            border: 1px solid #aaa;
+            background-color: rgb(96, 85, 74);
+            //height: 50px;
+            margin: 10px;
+        }
+    }
+}
+.menu-bloc-archive-container .menu .menu-item a{
+    padding-left: 1.5rem;
+    width: 200px;
+    background-repeat: no-repeat;
+    display: block;
+}
+.bloc__cours a{
+    background-image: url(https://s2.svgbox.net/octicons.svg?ic=mortar-board);
+}
+.bloc__4w4 a{
+    background-image: url(https://s2.svgbox.net/octicons.svg?ic=repo-bold);
+}

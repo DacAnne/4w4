@@ -18,6 +18,10 @@
                 "menu" => "evenement",
                 "container" => "nav"
             ));
+            wp_nav_menu(array(
+                "menu" => "bloc-archive",
+                "container" => "nav"
+            ));
         ?>
     </section>
     <section class="blocflex">
@@ -26,6 +30,9 @@
                 while (have_posts()) : the_post();
                 if (in_category('galerie')){    
                     $ma_categorie = 'galerie';
+                }
+                if (in_category('cours')){    
+                    $ma_categorie = 'cours';
                 }
                 else{
                     $ma_categorie = '4w4';
