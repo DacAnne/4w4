@@ -31,7 +31,7 @@
                 if (in_category('galerie')){    
                     $ma_categorie = 'galerie';
                 }
-                if (in_category('cours')){    
+                else if (in_category('cours')){    
                     $ma_categorie = 'cours';
                 }
                 else{
