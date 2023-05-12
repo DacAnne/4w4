@@ -1,10 +1,9 @@
-.menu-evenement-container{
-    width: 85%;
+.menu-evenement-container,.menu-bloc-archive-container{
     .menu{ //ul
         display: flex;
-        flex-wrap: nowrap;
-        padding: 0;
+        flex-wrap: wrap;
         justify-content: center;
+        padding: 0;
         .menu-item{//li
             display: flex;
             flex-direction: column;
@@ -47,13 +46,18 @@
         }
     }
 }
+.menu-bloc-archive-container{
+    border-top: 1px solid rgb(96, 85, 74);
+}
 .menu-bloc-archive-container .menu .menu-item a{
     background-repeat: no-repeat;
     display: block;
 }
 .bloc__cours a{
     background-image: url(https://s2.svgbox.net/octicons.svg?ic=mortar-board);
+
 }
 .bloc__4w4 a{
     background-image: url(https://s2.svgbox.net/octicons.svg?ic=repo-bold);
+
 }
