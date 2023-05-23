@@ -825,23 +825,22 @@ form button {
   }
 }
 .menu-atelier-container .menu a .title {
+  opacity: 0;
   position: absolute;
   width: 300px;
   height: 100px;
-  background-color: rgb(96, 85, 74);
-  transition: background-color 1s;
+  transition: opacity 1s;
 }
 @media screen and (min-width: 1000px) {
   .menu-atelier-container .menu a .title {
     width: 400px;
   }
 }
-.menu-atelier-container .menu a .title:hover {
-  background-color: rgba(96, 85, 74, 0);
-}
 .menu-atelier-container .menu a .description {
+  opacity: 0;
   position: absolute;
   font-size: 0.8rem;
+  transition: opacity 1s;
 }
 .menu-atelier-container .menu a .menu-thumbnail {
   margin: 0;
@@ -849,6 +848,12 @@ form button {
   width: 150px;
   margin: 0 auto;
   height: auto;
+}
+.menu-atelier-container .menu a:hover .title {
+  opacity: 1;
+}
+.menu-atelier-container .menu a:hover .description {
+  opacity: 1;
 }
 
 /**
