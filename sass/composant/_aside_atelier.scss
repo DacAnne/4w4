@@ -1,0 +1,48 @@
+.menu-atelier-container{
+    //nav
+    .menu{
+        
+        //ul
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        
+        @media screen and (min-width: $largeur__bureau) {
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .menu-item{
+            //li
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            @media screen and (min-width: $largeur__bureau) {
+               justify-content: left;
+                
+            }
+            a{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+               
+                code{
+                    display: block;
+                    white-space: nowrap;
+                }
+                p{
+                    display: none;
+                    white-space: nowrap;
+                    font-size: clamp(0.5rem, 0.3077rem + 0.6154vw, 1rem);
+                    @media screen and (min-width: $largeur__bureau) {
+                        display: block;
+                    }
+
+                }
+            }
+        }
+    }
+}

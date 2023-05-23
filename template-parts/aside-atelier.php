@@ -1,4 +1,4 @@
-<aside class="site__aside">
+<aside class="site__aside__atelier">
 <?php    
     the_post_thumbnail('thumbnail');
 ?>
