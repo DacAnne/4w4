@@ -496,6 +496,22 @@ main article {
   box-shadow: 12px 12px 2px 1px rgba(79, 79, 155, 0.2);
 }
 
+table {
+  border: 1px solid rgb(0, 0, 0);
+}
+table th, table td {
+  border: 1px dotted rgb(0, 0, 0);
+}
+table th {
+  background-color: aqua;
+}
+table td:nth-child(even) {
+  background-color: rgb(241, 171, 171);
+}
+table td:nth-child(odd) {
+  background-color: rgb(173, 171, 241);
+}
+
 .blocflex {
   display: flex;
   justify-content: space-between;
@@ -779,6 +795,7 @@ form button {
 }
 
 .menu-atelier-container .menu {
+  overflow-x: hidden;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -788,7 +805,7 @@ form button {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  border: 1px solid #aaa;
+  border: 1px solid rgb(191, 56, 56);
   background-color: rgb(96, 85, 74);
   margin: 10px;
 }
@@ -808,19 +825,30 @@ form button {
   }
 }
 .menu-atelier-container .menu a .title {
-  font-size: 1.3rem;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  display: block;
-  padding: 5px 0;
+  position: absolute;
+  width: 300px;
+  height: 100px;
+  background-color: rgb(96, 85, 74);
+  transition: background-color 1s;
+}
+@media screen and (min-width: 1000px) {
+  .menu-atelier-container .menu a .title {
+    width: 400px;
+  }
+}
+.menu-atelier-container .menu a .title:hover {
+  background-color: rgba(96, 85, 74, 0);
 }
 .menu-atelier-container .menu a .description {
+  position: absolute;
   font-size: 0.8rem;
-  padding-bottom: 10px;
 }
 .menu-atelier-container .menu a .menu-thumbnail {
+  margin: 0;
   display: block;
   width: 150px;
-  height: 150px;
+  margin: 0 auto;
+  height: auto;
 }
 
 /**
