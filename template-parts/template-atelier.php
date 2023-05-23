@@ -14,14 +14,28 @@ if ( have_posts() ) : the_post(); ?>
 ?>
 <h1><?= get_the_title(); ?></h1>
 <?php the_content();?>
-<div>
-<p>L'adresse de l'evénement<?php the_field('adresse'); ?></p>
-<p>La date et l'heure de l'événement<?php the_field('date'); ?></p>    
-<p>La date et l'heure de l'événement<?php the_field('heure'); ?></p> 
-<p>La date et l'heure de l'événement<?php the_field('duree'); ?></p> 
-<p>La date et l'heure de l'événement<?php the_field('formateur'); ?></p> 
-</div>
-
+<table>
+  <tr> 
+    <th>Date</th>
+    <th><?php the_field('adresse'); ?></th>
+  </tr>
+  <tr>
+    <td>Heure</td>
+    <td><?php the_field('heure'); ?></td>
+  </tr>
+  <tr>
+    <td>Date</td>
+    <td><?php the_field('date'); ?></td>
+  </tr>
+  <tr>
+    <td>Durée</td>
+    <td><?php the_field('duree'); ?></td>
+  </tr>
+  <tr>
+    <td>formateur</td>
+    <td><?php the_field('formateur'); ?></td>
+  </tr>
+</table>
 <?php endif;?>
 </main><!-- #main -->
 <?php

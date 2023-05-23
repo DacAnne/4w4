@@ -735,6 +735,51 @@ form button {
   background-image: url(https://s2.svgbox.net/octicons.svg?ic=repo-bold);
 }
 
+.menu-atelier-container .menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+}
+.menu-atelier-container .menu .menu-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 1px solid #aaa;
+  background-color: rgb(96, 85, 74);
+  margin: 10px;
+}
+.menu-atelier-container .menu a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+  width: 300px;
+  font-family: monospace;
+}
+@media screen and (min-width: 1000px) {
+  .menu-atelier-container .menu a {
+    width: 400px;
+  }
+}
+.menu-atelier-container .menu a .title {
+  font-size: 1.3rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: block;
+  padding: 5px 0;
+}
+.menu-atelier-container .menu a .description {
+  font-size: 0.8rem;
+  padding-bottom: 10px;
+}
+.menu-atelier-container .menu a .menu-thumbnail {
+  display: block;
+  width: 150px;
+  height: 150px;
+}
+
 /**
 * Mise en page général avec display grid
 */

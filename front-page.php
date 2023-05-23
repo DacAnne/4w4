@@ -19,6 +19,10 @@
                 "container" => "nav"
             ));
             wp_nav_menu(array(
+                "menu" => "atelier",
+                "container" => "nav"
+            ));
+            wp_nav_menu(array(
                 "menu" => "bloc-archive",
                 "container" => "nav"
             ));
